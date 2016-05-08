@@ -16,6 +16,13 @@
 		3B0022DF1CDD67A1001B0B49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0022DD1CDD67A1001B0B49 /* LaunchScreen.storyboard */; };
 		3B0022EA1CDD67A1001B0B49 /* cat_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0022E91CDD67A1001B0B49 /* cat_GameTests.swift */; };
 		3B0022F51CDD67A1001B0B49 /* cat_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0022F41CDD67A1001B0B49 /* cat_GameUITests.swift */; };
+		3B0023061CDD680A001B0B49 /* cat_igloo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0023021CDD680A001B0B49 /* cat_igloo.png */; };
+		3B0023071CDD680A001B0B49 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0023031CDD680A001B0B49 /* cat.png */; };
+		3B0023081CDD680A001B0B49 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0023041CDD680A001B0B49 /* dog.png */; };
+		3B0023091CDD680A001B0B49 /* png_wall__1_by_stockpremader-d6n7vul.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0023051CDD680A001B0B49 /* png_wall__1_by_stockpremader-d6n7vul.png */; };
+		3B00230D1CDD6B6A001B0B49 /* dog3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B00230B1CDD6B6A001B0B49 /* dog3.png */; };
+		3B5B4C721CDFF5B800DE5F24 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B4C701CDFF5B800DE5F24 /* MyParticle.sks */; };
+		3B5B4C731CDFF5B800DE5F24 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B4C711CDFF5B800DE5F24 /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		3B0022F01CDD67A1001B0B49 /* cat_GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cat_GameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0022F41CDD67A1001B0B49 /* cat_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cat_GameUITests.swift; sourceTree = "<group>"; };
 		3B0022F61CDD67A1001B0B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B0023021CDD680A001B0B49 /* cat_igloo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat_igloo.png; path = ../../cat_igloo.png; sourceTree = "<group>"; };
+		3B0023031CDD680A001B0B49 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cat.png; path = ../../cat.png; sourceTree = "<group>"; };
+		3B0023041CDD680A001B0B49 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dog.png; path = ../../dog.png; sourceTree = "<group>"; };
+		3B0023051CDD680A001B0B49 /* png_wall__1_by_stockpremader-d6n7vul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "png_wall__1_by_stockpremader-d6n7vul.png"; path = "../../png_wall__1_by_stockpremader-d6n7vul.png"; sourceTree = "<group>"; };
+		3B00230B1CDD6B6A001B0B49 /* dog3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dog3.png; path = ../../dog3.png; sourceTree = "<group>"; };
+		3B5B4C701CDFF5B800DE5F24 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		3B5B4C711CDFF5B800DE5F24 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +117,13 @@
 			children = (
 				3B0022D01CDD67A1001B0B49 /* AppDelegate.swift */,
 				3B0022D21CDD67A1001B0B49 /* GameScene.sks */,
+				3B5B4C701CDFF5B800DE5F24 /* MyParticle.sks */,
+				3B5B4C711CDFF5B800DE5F24 /* spark.png */,
+				3B00230B1CDD6B6A001B0B49 /* dog3.png */,
+				3B0023021CDD680A001B0B49 /* cat_igloo.png */,
+				3B0023031CDD680A001B0B49 /* cat.png */,
+				3B0023041CDD680A001B0B49 /* dog.png */,
+				3B0023051CDD680A001B0B49 /* png_wall__1_by_stockpremader-d6n7vul.png */,
 				3B0022D41CDD67A1001B0B49 /* GameScene.swift */,
 				3B0022D61CDD67A1001B0B49 /* GameViewController.swift */,
 				3B0022D81CDD67A1001B0B49 /* Main.storyboard */,
@@ -199,6 +220,7 @@
 				TargetAttributes = {
 					3B0022CC1CDD67A1001B0B49 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = B7B8G69MYV;
 					};
 					3B0022E41CDD67A1001B0B49 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -235,10 +257,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5B4C731CDFF5B800DE5F24 /* spark.png in Resources */,
+				3B0023081CDD680A001B0B49 /* dog.png in Resources */,
+				3B0023071CDD680A001B0B49 /* cat.png in Resources */,
 				3B0022D31CDD67A1001B0B49 /* GameScene.sks in Resources */,
 				3B0022DF1CDD67A1001B0B49 /* LaunchScreen.storyboard in Resources */,
+				3B0023061CDD680A001B0B49 /* cat_igloo.png in Resources */,
 				3B0022DC1CDD67A1001B0B49 /* Assets.xcassets in Resources */,
+				3B00230D1CDD6B6A001B0B49 /* dog3.png in Resources */,
+				3B0023091CDD680A001B0B49 /* png_wall__1_by_stockpremader-d6n7vul.png in Resources */,
 				3B0022DA1CDD67A1001B0B49 /* Main.storyboard in Resources */,
+				3B5B4C721CDFF5B800DE5F24 /* MyParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +438,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = cat_Game/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "comtomomi.ios.cat-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -420,10 +452,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = cat_Game/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "comtomomi.ios.cat-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -494,6 +529,7 @@
 				3B0022FB1CDD67A1001B0B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B0022FC1CDD67A1001B0B49 /* Build configuration list for PBXNativeTarget "cat_GameTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +538,7 @@
 				3B0022FE1CDD67A1001B0B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B0022FF1CDD67A1001B0B49 /* Build configuration list for PBXNativeTarget "cat_GameUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +547,7 @@
 				3B0023011CDD67A1001B0B49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
