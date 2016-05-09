@@ -24,6 +24,9 @@
 		3B5B4C721CDFF5B800DE5F24 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B4C701CDFF5B800DE5F24 /* MyParticle.sks */; };
 		3B5B4C731CDFF5B800DE5F24 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B4C711CDFF5B800DE5F24 /* spark.png */; };
 		3BF1DF8E1CE04A510074A2C7 /* cat7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1DF8D1CE04A510074A2C7 /* cat7.wav */; };
+		3BF1DF921CE124290074A2C7 /* food1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1DF8F1CE124290074A2C7 /* food1.png */; };
+		3BF1DF931CE124290074A2C7 /* toy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1DF901CE124290074A2C7 /* toy1.png */; };
+		3BF1DF941CE124290074A2C7 /* toy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF1DF911CE124290074A2C7 /* toy2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		3B5B4C701CDFF5B800DE5F24 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		3B5B4C711CDFF5B800DE5F24 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		3BF1DF8D1CE04A510074A2C7 /* cat7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = cat7.wav; path = ../../cat7.wav; sourceTree = "<group>"; };
+		3BF1DF8F1CE124290074A2C7 /* food1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food1.png; path = ../../food1.png; sourceTree = "<group>"; };
+		3BF1DF901CE124290074A2C7 /* toy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toy1.png; path = ../../toy1.png; sourceTree = "<group>"; };
+		3BF1DF911CE124290074A2C7 /* toy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toy2.png; path = ../../toy2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +125,15 @@
 			children = (
 				3B0022D01CDD67A1001B0B49 /* AppDelegate.swift */,
 				3B0022D21CDD67A1001B0B49 /* GameScene.sks */,
+				3BF1DF8F1CE124290074A2C7 /* food1.png */,
+				3BF1DF901CE124290074A2C7 /* toy1.png */,
+				3BF1DF911CE124290074A2C7 /* toy2.png */,
 				3BF1DF8D1CE04A510074A2C7 /* cat7.wav */,
 				3B5B4C701CDFF5B800DE5F24 /* MyParticle.sks */,
 				3B5B4C711CDFF5B800DE5F24 /* spark.png */,
 				3B00230B1CDD6B6A001B0B49 /* dog3.png */,
-				3B0023021CDD680A001B0B49 /* cat_igloo.png */,
 				3B0023031CDD680A001B0B49 /* cat.png */,
+				3B0023021CDD680A001B0B49 /* cat_igloo.png */,
 				3B0023041CDD680A001B0B49 /* dog.png */,
 				3B0023051CDD680A001B0B49 /* png_wall__1_by_stockpremader-d6n7vul.png */,
 				3B0022D41CDD67A1001B0B49 /* GameScene.swift */,
@@ -260,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BF1DF931CE124290074A2C7 /* toy1.png in Resources */,
 				3B5B4C731CDFF5B800DE5F24 /* spark.png in Resources */,
 				3B0023081CDD680A001B0B49 /* dog.png in Resources */,
 				3B0023071CDD680A001B0B49 /* cat.png in Resources */,
@@ -270,6 +280,8 @@
 				3B0022DC1CDD67A1001B0B49 /* Assets.xcassets in Resources */,
 				3B00230D1CDD6B6A001B0B49 /* dog3.png in Resources */,
 				3B0023091CDD680A001B0B49 /* png_wall__1_by_stockpremader-d6n7vul.png in Resources */,
+				3BF1DF941CE124290074A2C7 /* toy2.png in Resources */,
+				3BF1DF921CE124290074A2C7 /* food1.png in Resources */,
 				3B0022DA1CDD67A1001B0B49 /* Main.storyboard in Resources */,
 				3B5B4C721CDFF5B800DE5F24 /* MyParticle.sks in Resources */,
 			);

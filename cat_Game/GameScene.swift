@@ -16,17 +16,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let manager = CMMotionManager()
     var player = SKSpriteNode()
+    //var wall = SKSpriteNode()
+    var cat = SKSpriteNode()
     var dog = SKSpriteNode()
     var endNode = SKSpriteNode()
-    var welcomeMessage = SKLabelNode()
+    var welcomeMessage = SKLabelNode(fontNamed:"Mosamosa")
     var dogMessage = SKLabelNode()
     var catMeowSound = SKAction.playSoundFileNamed("cat7.wav", waitForCompletion: false)
+    let tryAgainLabel = SKLabelNode(fontNamed: "Hiragino KAku Gothic proN")
+    var resetLabel = SKLabelNode()
+    var gameoverFlag = false
+    
     
     override func didMoveToView(view: SKView) {
+        
         
         self.physicsWorld.contactDelegate = self
         
         player = self.childNodeWithName("player") as! SKSpriteNode
+        //wall = self.childNodeWithName("wall") as! SKSpriteNode
+        cat = self.childNodeWithName("cat") as! SKSpriteNode
         
         endNode = self.childNodeWithName("endNode") as! SKSpriteNode
         
@@ -34,10 +43,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         welcomeMessage = self.childNodeWithName("welcomeMessage") as! SKLabelNode
         welcomeMessage.fontColor = UIColor.greenColor();
-        welcomeMessage.text = "Welcome Home, Ruki-kun!"
-        welcomeMessage.fontSize = 45
+        welcomeMessage.text = "Get your igloo!"
+        welcomeMessage.fontSize = 80
         welcomeMessage.position = CGPoint(x: 500, y: 1600)
         self.welcomeMessage.hidden = true
+        
+        // initial position of cat
+        //cat.position = CGPoint (x: 205.914, y: 178.794)
 
         manager.startAccelerometerUpdates()
         if manager.accelerometerAvailable
@@ -62,6 +74,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //end message
             print("You won!")
             welcomeMessage.text = "Welcome Home!"
+            welcomeMessage.fontColor = UIColor.blueColor();
             welcomeMessage.hidden = false
             manager.accelerometerUpdateInterval = 0.5
 
@@ -72,24 +85,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         didDogContact(contact)
     }
 
-//     this never gets triggered
-//     only didBeginContact gets triggered
-//     because it is provided 
+    
     func didDogContact(contact: SKPhysicsContact){
 
         let bodyA = contact.bodyA
         let bodyB = contact.bodyB
+        
         
         if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 3 || bodyA.categoryBitMask == 3 && bodyB.categoryBitMask == 1 {
             
             
             runAction(catMeowSound)
             
-            //dog message
-            print("Grrrrr")
+            //Action when cat touches the dogs
             welcomeMessage.text = "Try Again!"
+            welcomeMessage.fontColor = UIColor.redColor();
             welcomeMessage.hidden = false
-            manager.accelerometerUpdateInterval = 0.5
+//            if manager.accelerometerAvailable
+//            {
+//                manager.accelerometerUpdateInterval = 4.0
+//            }
+            
+            gameoverFlag = true;
+            
+            
         }
         else{
             welcomeMessage.hidden = false
@@ -97,21 +116,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
-//    func playSoundFileNamed(soundFile: String,
-//                            waitForCompletion wait: Bool) {
-//        //SKAction
-//        
-////        SKAction* soundAction1 = [SKAction playSoundFileNamed:@"cat7.wav" waitForCompletion:YES];
-//    }
+    func reset(){
+        gameoverFlag = false
+        // set position of cat to original
+        cat.position = CGPoint (x: 205.914, y: 178.794)
+
+        welcomeMessage.text = "Get the igloo!"
+        welcomeMessage.fontColor = UIColor.greenColor();
+    }
+    
+    override func update(currentTime: CFTimeInterval){
+        if(gameoverFlag == true){
+            self.reset()
+        }
+    }
 
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    //override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         
         
-    }
+    //}
     
-    override func update(currentTime: CFTimeInterval) {
+    //override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-    }
+    //}
 }
