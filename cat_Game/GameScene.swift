@@ -10,14 +10,17 @@ typealias CMAccelerometerHandler = (CMAccelerometerData?, NSError?) -> Void
 
 import SpriteKit
 import CoreMotion
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let manager = CMMotionManager()
     var player = SKSpriteNode()
-    //var dog = SKSpriteNode()
+    var dog = SKSpriteNode()
     var endNode = SKSpriteNode()
     var welcomeMessage = SKLabelNode()
+    var dogMessage = SKLabelNode()
+    var catMeowSound = SKAction.playSoundFileNamed("cat7.wav", waitForCompletion: false)
     
     override func didMoveToView(view: SKView) {
         
@@ -27,7 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         endNode = self.childNodeWithName("endNode") as! SKSpriteNode
         
-        //dog = self.childNodeWithName("dog") as! SKSpriteNode
+       // dog = self.childNodeWithName("dog") as! SKSpriteNode
         
         welcomeMessage = self.childNodeWithName("welcomeMessage") as! SKLabelNode
         welcomeMessage.fontColor = UIColor.greenColor();
@@ -36,7 +39,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         welcomeMessage.position = CGPoint(x: 500, y: 1600)
         self.welcomeMessage.hidden = true
 
-        
         manager.startAccelerometerUpdates()
         if manager.accelerometerAvailable
         {
@@ -50,9 +52,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
     }
+    
     func didBeginContact(contact: SKPhysicsContact){
         let bodyA = contact.bodyA
         let bodyB = contact.bodyB
+        
         
         if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 2 || bodyA.categoryBitMask == 2 && bodyB.categoryBitMask == 1{
             //end message
@@ -65,7 +69,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         else{
             welcomeMessage.hidden = true
         }
+        didDogContact(contact)
     }
+
+//     this never gets triggered
+//     only didBeginContact gets triggered
+//     because it is provided 
+    func didDogContact(contact: SKPhysicsContact){
+
+        let bodyA = contact.bodyA
+        let bodyB = contact.bodyB
+        
+        if bodyA.categoryBitMask == 1 && bodyB.categoryBitMask == 3 || bodyA.categoryBitMask == 3 && bodyB.categoryBitMask == 1 {
+            
+            
+            runAction(catMeowSound)
+            
+            //dog message
+            print("Grrrrr")
+            welcomeMessage.text = "Try Again!"
+            welcomeMessage.hidden = false
+            manager.accelerometerUpdateInterval = 0.5
+        }
+        else{
+            welcomeMessage.hidden = false
+        }
+
+    }
+    
+//    func playSoundFileNamed(soundFile: String,
+//                            waitForCompletion wait: Bool) {
+//        //SKAction
+//        
+////        SKAction* soundAction1 = [SKAction playSoundFileNamed:@"cat7.wav" waitForCompletion:YES];
+//    }
+
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
